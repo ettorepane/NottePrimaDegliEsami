@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     //get time in seconds left from the exam,
     // it is at hour 09:00:00 the 21 of June 2023
-    const examDate = new Date(2023, 5, 21, 9, 0, 0);
+    const examDate = new Date(2023, 5, 21, 8, 30, 0);
     const now = new Date();
     const timeLeft = (examDate.getTime() - now.getTime()) / 1000;
     this.config.leftTime = timeLeft;
