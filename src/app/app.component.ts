@@ -19,7 +19,9 @@ const CountdownTimeUnits: Array<[string, number]> = [
 export class AppComponent implements OnInit {
   title = 'NottePrimaDegliEsami';
   //format Days,Hours,Minutes,Seconds,Milliseconds
-
+  count = 0;
+  okay = true;
+  ciao = false;
 
   config: CountdownConfig = {
     leftTime: 3603,
@@ -33,6 +35,24 @@ export class AppComponent implements OnInit {
     const now = new Date();
     const timeLeft = (examDate.getTime() - now.getTime()) / 1000;
     this.config.leftTime = timeLeft;
+  }
+  login(){
+    this.count++;
+    if(this.okay == false){
+      this.count = 0;
+    }
+    if(this.count == 6){
+      this.okay = false;
+      //wait 3 seconds than set okay to true
+      setTimeout(() => {
+        this.okay = true;
+      }
+      , 3000);
+    }
+    if(this.count == 7){
+      this.count = 0;
+      this.ciao = true;
+    }
   }
 
 }

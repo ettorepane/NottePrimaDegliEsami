@@ -1,11 +1,20 @@
+<div class="loginButton">
+  <button class="btn btn-primary" (click)="login()">Login</button>
+</div>
 <h2>Tempo rimanente alla tua Maturità 2023:</h2>
 <div class="timer">
   <countdown #cd [config]="config"></countdown>
 </div>
 <div class="legend">
   <p>Mesi | Giorni | Ore | Minuti | Secondi</p>
+  <br>
   <p>21 Giugno 2023 / 08.30</p>
 </div>
 <div class="spotify">
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/148uoUpRp6FJK5qYoXijwm?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 </div>
+<div style="text-align: center;" *ngIf="ciao" class="ciao">
+  <h2>Ciao CAMI <3</h2>
+  <h5>Una lettera aperta per scriverti che ti dedico anche questo codice</h5>
+</div>
+
